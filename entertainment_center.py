@@ -1,17 +1,13 @@
 # Import modules
 import media
-import json
 import fresh_tomatoes
+import movies
 
 # Create empty list to store "media.Movie" objects
 movies_list = []
 
-# Extract data from "movies.json"
-with open('movies.json') as movies_data:
-    movies = json.load(movies_data)
-
 # For each movie,
-for movie in movies:
+for movie in movies.movies:
     # Create media.Movie object
     movie_obj = media.Movie(movie['title'],
                             movie['storyline'],
